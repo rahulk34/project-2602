@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Create Apartment Listing</h2>
+<form method="POST">
+<input name="title" placeholder="Title"><br>
+<input name="location" placeholder="Location"><br>
+<input name="amenities" placeholder="Amenities"><br>
+<textarea name="description" placeholder="Description"></textarea><br>
+<button type="submit">Create</button>
+</form>
+{% endblock %}

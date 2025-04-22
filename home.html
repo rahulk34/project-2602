@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Apartment Listings</h2>
+<form method="GET">
+<input name="location" placeholder="Search by location">
+<input name="amenities" placeholder="Search by amenities">
+<button type="submit">Filter</button>
+</form>
+{% for apt in apartments %}
+<p><a href="/apartment/{{ apt.id }}">{{ apt.title }} - {{ apt.location }}</a></p>
+{% endfor %}
+{% endblock %}

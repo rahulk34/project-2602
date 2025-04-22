@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>{{ apartment.title }}</h2>
+<p>{{ apartment.description }}</p>
+<h3>Reviews:</h3>
+{% for review in reviews %}
+<p>{{ review.content }} (Rating: {{ review.rating }})</p>
+{% endfor %}
+<h3>Add Review</h3>
+<form method="POST">
+<textarea name="content" placeholder="Write your review..."></textarea><br>
+<input name="rating" type="number" min="1" max="5"><br>
+<button type="submit">Submit</button>
+</form>
+{% endblock %}
